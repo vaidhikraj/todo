@@ -1,0 +1,38 @@
+{% extends "tempfirst/index.html" %}
+
+{% block content%}
+
+<section class="container-fluid ">
+    <section class="row justify-content-center">
+        <section class="col-md-12" >
+
+            <form class="form-container" id="for_signup" method='POST'>
+
+                {%csrf_token%}
+
+                <h4 class="text-black">SignUp</h4>
+                <div class="form-group">
+                    <label for="inputtext">Username*</label>
+                    <input type="text" class="form-control" id="inputtext" placeholder="Username" size="40" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword">Password*</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password1">
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword">Conform Password*</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="conform Password" name="password2">
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                <br>
+                <div class="text-center">
+                    Do you already have an account? <a href="/login">Login here</a>
+                </div
+            </form>
+            
+
+        </section>
+    </section>
+</section>
+{% endblock %}

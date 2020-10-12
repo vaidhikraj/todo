@@ -1,0 +1,26 @@
+{% extends "tempfirst/base.html" %}
+
+{% block content%}
+
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-10">
+    {% if todos %}
+        <div class="list-group">
+            <h5>Current Todos</h5>
+            {% for todo in todos %}
+                <a href="{{todo.id}}" class="list-group-item list-group-item-action{% if todo.important %} list-group-item-danger{% endif %}"><b>{{ todo.title }}</b>{% if todo.desc %} - {{ todo.desc|truncatechars:30 }}{% endif %}</a>
+            {% endfor %}
+        </div>
+    {% else %}
+    <div class="text-center">
+        <h2 class="text-primary">No todos!</h2>
+        <h3 class="text-dark">Create Todo's & GOOD LUCK!</h3>
+    <br>
+        <a href="/createtodo" class="btn btn-primary">Newtodo</a>
+    </div>
+{% endif %}
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "tempfirst/base.html" %}
+
+{% block content%}
+
+<section class="container-fluid bg1">
+    <section class="row justify-content-center">
+        <section class="col-12 col-sm-6 col-lg-3 mt-5">
+            
+            <form class="form-container" id="for_createtodo" method='POST'>
+                <h4 class="text-white">Create Todo</h4>
+                    {% csrf_token%}
+
+                    {{form.as_p}}
+
+                    <input type="submit" value="SUBMIT" class="btn btn-primary" />
+            </form>
+        </section>
+    </section>
+</section>
+
+
+{% endblock %}

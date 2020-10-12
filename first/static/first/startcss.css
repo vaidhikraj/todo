@@ -1,0 +1,27 @@
+#for_start{
+    position: absolute;
+    top:15vh;
+   background-color:#669999;
+   padding: 60px;
+   border-radius: 10px;
+   box-shadow: 0px 0px 2px 0px #000;
+}
+#for_createtodo{
+    position: absolute;
+    top:0vh;
+   background-color:#669999;
+   padding: 40px;
+   width:110%;
+   border-radius: 10px;
+   box-shadow: 0px 0px 2px 0px #000;
+}
+#for_viewtodo{
+    position: absolute;
+    top:9vh;
+   background-color:#669999;
+   padding: 60px;
+   width:140%;
+   border-radius: 10px;
+   box-shadow: 0px 0px 2px 0px #000;
+
+}
